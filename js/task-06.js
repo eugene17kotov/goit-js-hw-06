@@ -4,7 +4,8 @@ inputRef.addEventListener('blur', onCheckLength);
 
 function onCheckLength(event) {
     const input = event.currentTarget;
-    input.value.length >= input.dataset.length ? onValidClass() : onInvalidClass();
+    console.log(input.value.trim().length);
+    input.value.trim().length == input.dataset.length ? onValidClass() : onInvalidClass();
 }
 
 function onValidClass() {
@@ -15,5 +16,5 @@ function onValidClass() {
 function onInvalidClass() {
     inputRef.classList.remove('valid');
     inputRef.classList.add('invalid');
-    alert('Min length - 6 symbols');
+    alert('Password length must be 6 symbols');
 }

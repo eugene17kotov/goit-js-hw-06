@@ -15,7 +15,7 @@ refs.destroyBtn.addEventListener('click', destroyBoxes);
 function createBoxes(amount) {
     const arrayBoxes = [];
 
-    for (let i = 0; i < amount; i += 1) {
+    for (let i = 0; i < amount && i < 100; i += 1) {
         const side = 30 + i * 10;
         arrayBoxes.push(
             `<div style="width: ${side}px; height: ${side}px; background-color: ${getRandomHexColor()};"></div>`
